@@ -1,5 +1,5 @@
 var request = new XMLHttpRequest();
-var appUrl = 'https://cafechat.app/';
+var appUrl = 'https://cafechat.app/build/';
 var srcPost = '?&v=' + (new Date()).getTime();
 request.open('GET', appUrl + 'index.html' + srcPost, true);
 request.onload = function() {
