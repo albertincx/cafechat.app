@@ -1,3 +1,9 @@
 include: [
   "build",
+  "web",
+  "web/js",
+  "web/css",
+  "web/fonts",
+  "web/img",
+  "web/scss",
 ]
