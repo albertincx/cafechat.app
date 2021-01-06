@@ -7,4 +7,5 @@ include: [
   "web/img",
   "web/scss",
   "policy.html",
+  "terms.html",
 ]
