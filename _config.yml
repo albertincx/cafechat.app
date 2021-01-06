@@ -6,4 +6,5 @@ include: [
   "web/fonts",
   "web/img",
   "web/scss",
+  "policy.html",
 ]
