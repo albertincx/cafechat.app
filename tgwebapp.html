@@ -30,7 +30,10 @@
 <script>
     window.__arsfChatIdg='336925909';
     window.__arsfChatUrl = 'api.cafechat.app';
-    
+    document.getElementById('test').innerHTML = localStorage.getItem('test') || 'init';
+if (!localStorage.getItem('test')) {
+localStorage.setItem('test', new Date())
+}
 </script>
 </body>
 </html>
