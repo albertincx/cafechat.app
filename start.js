@@ -1,19 +1,19 @@
-var request = new XMLHttpRequest();
-var appUrl = 'https://cafechat.app/assets/';
-var srcPost = '?&v=' + (new Date()).getTime();
+var request = new XMLHttpRequest()
+var appUrl = 'https://cafechat.app/assets/'
+var srcPost = '?&v=' + (new Date()).getTime()
 if (!window.cafechatAppLoaded) {
   request.open('GET', appUrl + 'index.html' + srcPost, true)
   request.onload = function () {
     if (request.status >= 200 && request.status < 400) {
-      let tag
+      var tag
       var resp = request.responseText
       var ch = document.createElement('div')
       ch.setAttribute('id', 'apppopupmax')
       document.body.appendChild(ch)
       var srcs = resp.match(/src="(.*?)"|href="(.*?)"/g)
-      let cssFound = ''
+      var cssFound = ''
       for (let i = 0; i < srcs.length; i++) {
-        let src = srcs[i].replace(/src=|href=/, '').replace(/"/g, '')
+        var src = srcs[i].replace(/src=|href=/, '').replace(/"/g, '')
         var isJs = /.js/.test(src)
         if (src[0] === '/') src = appUrl + src
         if (!src) continue
@@ -33,5 +33,5 @@ if (!window.cafechatAppLoaded) {
     }
   }
   request.send()
-  window.cafechatAppLoaded = true;
+  window.cafechatAppLoaded = true
 }
